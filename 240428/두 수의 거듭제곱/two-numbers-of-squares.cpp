@@ -13,5 +13,8 @@ int main() {
 }
 
 void f1(int a, int b){
-    cout<<pow(a,b);
+    int t=1;
+    for (int i=0; i<b; i++)
+        t*=a;
+    cout<<t;
 }
