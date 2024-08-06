@@ -4,8 +4,8 @@ maxc=0
 for _ in range(n):
     a.append(list(map(int,input().split())))
 
-for i in range(3):
-    for j in range(3):
+for i in range(n):
+    for j in range(n):
         c=0
         if i+2 >= n or j+2 >= n:
             continue
