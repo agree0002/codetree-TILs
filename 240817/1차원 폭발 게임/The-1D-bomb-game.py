@@ -5,10 +5,8 @@ n,m=map(int,input().split())
 l=[int(input()) for _ in range(n)]
 
 tl=[]
-b=True
-while b:
+while 1:
     b=False
-
     for i in range(1, len(l)):
         if not b:
             tl.append(i-1)
@@ -24,15 +22,16 @@ while b:
                 for j in tl:
                     l[j]=0
             tl=[]
+            b=False
+
+    if 0 not in l:
+        break
 
     tl2=[]
     for k in l:
         if k != 0:
             tl2.append(k)
     l=tl2
-
-    if not b:
-        break
 
 print(len(l))
 for i in l:
