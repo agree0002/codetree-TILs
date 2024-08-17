@@ -4,9 +4,9 @@ input=sys.stdin.readline
 n,m=map(int,input().split())
 l=[int(input()) for _ in range(n)]
 
-tl=[]
 while 1:
     b=False
+    tl=[]
     for i in range(1, len(l)):
         if not b:
             tl.append(i-1)
