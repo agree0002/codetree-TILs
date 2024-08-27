@@ -37,7 +37,7 @@ for i in range(4):
     for k in range(countZero):
         a[i].append(0)
 
-for _ in range(n):
+for _ in range(4 - n):
     a = rotate(a)
 
 for i in a:
