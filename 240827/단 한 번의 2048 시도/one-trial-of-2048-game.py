@@ -14,7 +14,7 @@ if c == "D":
     n = 1
 elif c == "R":
     n = 2
-elif c == "D":
+elif c == "U":
     n = 3
 for _ in range(n):
     a = rotate(a)
