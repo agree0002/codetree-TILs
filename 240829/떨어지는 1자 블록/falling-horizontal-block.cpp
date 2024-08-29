@@ -17,6 +17,11 @@ int main() {
     bool b = true;
     while (b) {
         row++;
+
+        if (row > n) {
+            break;
+        }
+        
         for (int i = k; i <= k + m - 1; i++) {
             if (a[row][i] == 1) {
                 b = false;
