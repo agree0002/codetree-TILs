@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-bool inArray(int x, int y, int n) {
+bool outArray(int x, int y, int n) {
     return x <= 0 || y <= 0 || x > n || y > n;
 }
 
@@ -15,8 +15,8 @@ int turn(int i) {
 }
 
 int main() {
-    int dx[4] = {1,0,-1,0};
-    int dy[4] = {0,-1,0,1};
+    int dx[4] = {0,-1,0,1};
+    int dy[4] = {1,0,-1,0};
     char arr[101][101];
     int n;
     cin >> n;
@@ -36,13 +36,13 @@ int main() {
         int nextX = x + dx[i];
         int nextY = y + dy[i];
 
-        if (arr[nextY][nextX] == '#') {
+        if (arr[nextX][nextY] == '#') {
             i = turn(i);
         } else {
             x = nextX;
             y = nextY;
             t++;
-            if (inArray(x, y, n)) {
+            if (outArray(x, y, n)) {
                 break;
             }
 
@@ -51,13 +51,13 @@ int main() {
             }
             nextX = x + dx[i];
             nextY = y + dy[i];
-            if (arr[nextY][nextX] == '#') {
+            if (arr[nextX][nextY] == '#') {
                 i = turn(i);
             } else {
                 x = nextX;
                 y = nextY;
                 t++;
-                if (inArray(x, y, n)) {
+                if (outArray(x, y, n)) {
                     break;
                 }
             }
