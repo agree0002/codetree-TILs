@@ -36,7 +36,7 @@ int main() {
 				int nx = x;
 				int ny = y;
 				if (count[x][y] == 1) {
-					int max = arr[x][y];
+					int max = 0;
 					for (int k = 0; k < 4; k++) {
 						int nextX = x + dx[k];
 						int nextY = y + dy[k];
