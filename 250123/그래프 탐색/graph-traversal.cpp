@@ -31,11 +31,11 @@ int main() {
     DFS(1);
 
     int cnt = 0;
-    for (int i = 1; i <= n; i++) {
+    for (int i = 2; i <= n; i++) {
         if (visited[i]) {
             cnt++;
         }
     }
-    cout << cnt - 1;
+    cout << cnt;
     return 0;
 }
